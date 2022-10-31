@@ -32,7 +32,6 @@ jobs:
       # Upload artifacts(local build)
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
-        if: always()
         with:
          name: LocalSite
          path: ./site/
