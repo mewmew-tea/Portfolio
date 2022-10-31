@@ -1,0 +1,20 @@
+site_name: Miyazaki Taisuke's portfolio
+theme:
+  name: material
+
+nav:
+  - Top: index.md
+
+  
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      auto_title: true
+      use_pygments: true
+      linenums: true
+  - pymdownx.superfences
+
+# plugins:
+#   - offline
