@@ -1,0 +1,59 @@
+name: Deploy mkdocs
+
+on:
+  push:
+    branches: 
+    - "main"
+  pull_request:
+    branches: 
+    - "main"
+
+jobs:
+  deploy:
+    name: Deploy local files
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout branch 
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # setup python
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: install modules
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs-material
+          
+      # generate local build
+      - name: mkdocs local build
+        run: mkdocs build --clean
+      # Upload artifacts(local build)
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+         name: LocalSite
+         path: ./site/
+           
+#       # deploy to github io
+#       - name: mkdocs GithubIO deploy
+#         run: pip install mkdocs-material
+#       # Upload artifacts(githubIO build)
+#       - name: Upload Artifacts
+#         run: mkdocs gh-deploy --force
+           
+      # Post Discord Notify(by Actions Status Discord)
+      - name: Actions Status Discord
+        # uses: sarisia/actions-status-discord@f268209d088ace9f9666322b04d60e013fef212d
+        uses: sarisia/actions-status-discord@v1.10.0
+        if: always()
+        env: 
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        with:
+          status: ${{ job.status }}
+          
