@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   deploy:
-    name: Deploy local files
+    name: Deploy to local files and github pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -29,14 +29,16 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-
+      # install python modules
       - name: install modules
         run: |
           python -m pip install --upgrade pip
           pip install mkdocs-material
           # pip install mkdocs-glightbox
           
-      # generate local build
+      #--------------------------
+      # build and deploy local build
+      #--------------------------
       - name: mkdocs local build
         run: mkdocs build --clean --no-directory-urls
       # Upload artifacts(local build)
@@ -46,8 +48,9 @@ jobs:
          name: LocalSite
          path: ./site/
            
-     
-      # deploy to github io
+      #--------------------------
+      # build and deploy to github io
+      #--------------------------
       - name: mkdocs github io build
         run: mkdocs build --clean --use-directory-urls
       - name: Setup Pages
@@ -63,7 +66,6 @@ jobs:
            
       # Post Discord Notify(by Actions Status Discord)
       - name: Actions Status Discord
-        # uses: sarisia/actions-status-discord@f268209d088ace9f9666322b04d60e013fef212d
         uses: sarisia/actions-status-discord@v1.10.0
         if: always()
         env: 
