@@ -1,20 +1,92 @@
 site_name: Miyazaki Taisuke's portfolio
+
 theme:
   name: material
+  # for search lauguage
+  language: ja
+  features:
+    # - navigation.tabs
+    - navigation.indexes 
+    # - navigation.expand
+    - navigation.top
+    # - toc.integrate
+  # logo: images/logo.png
+  favicon: images/logo.png
+  palette: 
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: ダークテーマに切り替え
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: amber
+      accent: deep orange
+      scheme: slate 
+      toggle:
+        icon: material/weather-sunny  
+        name: ライトテーマに切り替え
 
 nav:
-  - Top: index.md
+  - Home: index.md
+  - Skills: skills.md
+  - Works:
+    - 作品一覧: ./works/overview.md
+    - MiyadaikuEngine1.0:
+      - 概要: ./works/MiyadaikuEngine1.0/overview.md
+      - マルチプラットフォームのための工夫: ./works/MiyadaikuEngine1.0/multiplatform.md
+      - レンダラについて: ./works/MiyadaikuEngine1.0/renderer.md
+      - C#スクリプティングシステム: ./works/MiyadaikuEngine1.0/scripting.md 
+      - エディタについて: ./works/MiyadaikuEngine1.0/editor.md  
+      - RuntimeとEditor間のプロセス通信（IPC）: ./works/MiyadaikuEngine1.0/ipc.md  
+      - ソースコードの品質管理（CI/CD）: ./works/MiyadaikuEngine1.0/cicd.md 
+      
+    - Effekseer:
+      - 概要: ./works/Effekseer/overview.md
+    - このポートフォリオの工夫: ./works/thisPortfolio.md
+    - がっぽり！爆走人力車: ./works/jinrikisha.md
 
   
 extra_css:
   - stylesheets/extra.css
+
 markdown_extensions:
-  - admonition
   - pymdownx.highlight:
       auto_title: true
       use_pygments: true
       linenums: true
+  - admonition
+  - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji 
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - def_list
+  - md_in_html
+  - abbr
+  - footnotes
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
 
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/mewmew_tea
+      name: mewmew_tea on Twitter
+    - icon: fontawesome/brands/github
+      link: https://github.com/mewmew-tea
+      name: mewmew_tea on GitHub
 # plugins:
 #   - offline
+#   - glightbox
+# plugins:
+#    - glightbox:
+#       zoomable: true
+#       # draggable: true
+#       skip_classes:
+#         - skip-lightbox
