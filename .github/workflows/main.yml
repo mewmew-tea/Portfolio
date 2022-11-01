@@ -7,14 +7,23 @@ on:
   pull_request:
     branches: 
     - "master"
+    
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     name: Deploy local files
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      
+      - name: Checkout
+        uses: actions/checkout@v3
+        
       # setup python
       - name: setup python
         uses: actions/setup-python@v4
@@ -25,10 +34,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install mkdocs-material
+          # pip install mkdocs-glightbox
           
       # generate local build
       - name: mkdocs local build
-        run: mkdocs build --clean
+        run: mkdocs build --clean --no-directory-urls
       # Upload artifacts(local build)
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
@@ -36,12 +46,20 @@ jobs:
          name: LocalSite
          path: ./site/
            
-#       # deploy to github io
-#       - name: mkdocs GithubIO deploy
-#         run: pip install mkdocs-material
-#       # Upload artifacts(githubIO build)
-#       - name: Upload Artifacts
-#         run: mkdocs gh-deploy --force
+     
+      # deploy to github io
+      - name: mkdocs github io build
+        run: mkdocs build --clean --use-directory-urls
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: './site/'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
            
       # Post Discord Notify(by Actions Status Discord)
       - name: Actions Status Discord
