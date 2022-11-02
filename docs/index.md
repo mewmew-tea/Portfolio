@@ -1,5 +1,8 @@
 # Miyazaki Taisuke's portfolio
 
+!!! note
+    現在このページは製作中です。
+    一部のページが未完成であったり、誤りや不具合がある場合があります。
 
 ## **自己紹介**
 
@@ -17,14 +20,19 @@
 
 ## ^^**[Skills（クリックで詳細へ）](./skills.md)**^^
 
-様々な技術が大好きなので、幅広く勉強をしています。
+様々な技術について、幅広く深く勉強をしています。
 
+---
 
-----
- 
+## ^^**[このポートフォリオの工夫（クリックで詳細へ）](./skills.md)**^^
+
+このポートフォリオは、Markdownで記述され、継続的にデプロイ（CD）されているなど、様々な工夫をしています。  
+
+---
+
 ## ^^**[Works（クリックですべての作品一覧へ）](./works/overview.md)**^^
 
-### [MiyadaikuEngine 1.0](./works/MiyadaikuEngine1.0/overview.md)
+### ^^[MiyadaikuEngine 1.0](./works/MiyadaikuEngine1.0/overview.md)^^
 
 
 ![](./images/MiyadaikuEngine1.0.png){ align=right width=50% }
@@ -33,10 +41,10 @@
 C#スクリプティングや、EditorとRuntimeのプロセスを分離、TCP/IPによるプロセス間通信などが特徴。  
 ゲーム開発のイテレーションを向上させるため、コア部分から丁寧に設計し機能を充実させている。
 
-### [Effekseer](./works/Effekseer/overview.md)
+### ^^[Effekseer](./works/Effekseer/overview.md)^^
 1.8以降の新機能開発のコアメンバーとして開発参加中。  
 
-### [がっぽり！爆走人力車](./works/jinrikisha.md)
+### ^^[がっぽり！爆走人力車](./works/jinrikisha.md)^^
 
 <div style="width:100%; display:flex; box-sizing:border-box">
 <div style="width:50%; padding-right:16px">
