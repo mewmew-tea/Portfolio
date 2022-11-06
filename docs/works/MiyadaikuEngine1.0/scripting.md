@@ -20,7 +20,11 @@ C++とC#間の相互運用時は、実行時においてユニークな「Instan
 
 ## ホットリロード機能
 
-準備中。すべてのフィールドをシリアライズしてる的なこと書こうかな。
+現在準備中です。
+参考資料として、過去に実験で実現している私のツイートを添付します。  
+（当時は興奮していたため、ツイート文が乱れている点につきましてはご容赦ください）
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">はい！！！ゲームのスクリプトっぽくして！！！！<br>再コンパイル（ホットリロード）する実験に成功しましたああああああ！！！！！！！<br>ホットリロードめちゃ苦労した…<br><br>（分かりづらいですが、C#スクリプトを変更して、キャラの移動スピード上げてます） <a href="https://t.co/jKKxVFF5i6">https://t.co/jKKxVFF5i6</a> <a href="https://t.co/o6DZWe6WSD">pic.twitter.com/o6DZWe6WSD</a></p>&mdash; 猫茶(実は犬派) (@mewmew_tea) <a href="https://twitter.com/mewmew_tea/status/1536982292413181952?ref_src=twsrc%5Etfw">June 15, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 ## スクリプト（コンポーネント）が呼び出される仕組み
 

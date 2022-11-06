@@ -11,11 +11,14 @@ theme:
     - navigation.top
     # - toc.integrate
   # logo: images/logo.png
-  favicon: images/logo.png
+  logo: images/SNS_Icon.jpg
+  favicon: images/SNS_Icon.jpg
   palette: 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: default
+      primary: amber
+      accent: deep orange
       toggle:
         icon: material/weather-night
         name: ダークテーマに切り替え

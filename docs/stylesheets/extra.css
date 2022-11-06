@@ -36,14 +36,16 @@ h2 {
     /* background: #a7a8b3; */
     border-left: solid 6px darkorange;
 }
-a{
+/* a{
     text-decoration: underline;
-}
+} */
 hr{
     border-top: 1px solid lightgray
 }
-
-a[target=_blank]::after{
+[data-md-color-scheme="slate"] {
+    --md-hue: 250; 
+  }
+/* a[target=_blank]::after{
     font-family: 'icomoon';
     content: "\900";
-}
+} */
