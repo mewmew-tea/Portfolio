@@ -1,7 +1,19 @@
 # C#スクリプティングシステム
 
 MiydaikuEngine 1.0は、C#スクリプティングに対応しています。  
-これは「Mono ([https://www.mono-project.com/:material-open-in-new:](https://www.mono-project.com/){:target="_blank"}) 」をNativeRuntime（C++）側へ埋め込んで実現しています。  
+
+このスクリプティングシステムの大きな特徴は、  
+”**C++側に埋め込まれている**”ことです。  
+
+C#とC++の連携手段としてもっとも有名であるものは、  
+**「.NETで開発したC#アプリケーションに、C++で記述されたdllを埋め込むこと（P/Invoke）」**です。  
+しかし、そもそも.NETは一部のプラットフォームにしか対応していません。  
+（例えば、.NETはPlaystationやXboxなどのゲーム機には非対応です。）  
+
+この手段では本エンジンの開発目標である、マルチプラットフォーム対応が不可能でした。  
+  
+そこで、「Mono ([https://www.mono-project.com/:material-open-in-new:](https://www.mono-project.com/){:target="_blank"}) 」を用いて、C#を動作させるVM（Virtual Machine/仮想マシン）をNativeRuntime（C++）側へ埋め込みました。  
+
 !!! note
     Monoは、クロスプラットフォームで動作する.NET Framework互換のフレームワークです。
 
