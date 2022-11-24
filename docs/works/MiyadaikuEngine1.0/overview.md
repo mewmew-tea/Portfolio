@@ -4,9 +4,27 @@
     本エンジンは、オープンソースで開発しています。  
     エンジンソース：[https://github.com/mewmew-tea/MiyadaikuEngine1.0:material-open-in-new:](https://github.com/mewmew-tea/MiyadaikuEngine1.0){:target="_blank"}
 
-## 設計思想
+## 目標・設計思想
+
+本エンジンの目標は大きく３つあります。  
+
+- マルチプラットフォーム対応
+- 開発しやすさの追及
+- ソースコードの品質の向上
+
 
 ## アーキテクチャ概要
+
+先述の目標から、エンジン設計を丁寧に時間をかけて行いました。  
+
+![](../../images/Architecture_20221110.svg)
+
+大きな特徴は３つあります。
+
+- ApplicationとEditorの完全分離（別exeファイル）
+- C#スクリプトで記述するゲームロジック
+- ApplicationとEditor間のプロセス間通信(IPC)
+
 
 ## 特徴とその解説
 
@@ -14,7 +32,7 @@
 - [レンダラについて](./renderer.md)  
 - [C#スクリプティングシステム](./scripting.md)  
 - [エディタについて](./editor.md)  
-- [RuntimeとEditor間のプロセス通信（IPC）](./ipc.md)  
+- [RuntimeとEditor間のプロセス間通信（IPC）](./ipc.md)  
 - [ソースコードの品質管理（CI/CD）](./cicd.md)  
 
 ## 備考：参考にしたもの

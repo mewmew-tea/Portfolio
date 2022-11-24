@@ -3,6 +3,10 @@
 !!! note
     現在このポートフォリオサイトは製作中です。
     一部のページが未完成であったり、誤りや不具合がある場合があります。
+!!! note
+    本ポートフォリオは、継続的にデプロイされています。  
+    最新のデプロイ： [https://mewmew-tea.github.io/Portfolio/](https://mewmew-tea.github.io/Portfolio/)   
+    GitHubリポジトリ：[https://github.com/mewmew-tea/Portfolio](https://github.com/mewmew-tea/Portfolio)
 
 ## **自己紹介**
 

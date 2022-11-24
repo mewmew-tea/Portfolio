@@ -1,41 +1,104 @@
 # C#スクリプティングシステム
 
-MiydaikuEngine 1.0は、C#スクリプティングに対応しています。  
+MiydaikuEngine 1.0は、C#スクリプティングに対応しています。 
+
+このようにコンポーネントのスクリプトを記述することができます。
+```csharp title="弾を発射するPlayerのスクリプト"
+public class PlayerController : MonoBehaviour
+{
+    public float speed = 0.05f; // 弾の速さ
+    public int interval = 40;   // 再度発射できるようになるまでのフレーム数
+    private int counter = 0;    // 直近に発射してからの経過フレーム数
+    private List<GameObject> bullets;   // シーンに存在する弾のゲームオブジェクト
+    
+    // 初期化。Runtime（C++）が自動で呼び出してくれる。
+    private void Init()
+    {
+        // find bullet gameobjects
+        GameObject[] gameObjects = gameObject.GetAll();
+        bullets = new List<GameObject>();
+        foreach (GameObject obj in gameObjects)
+        {
+            if (obj.GetComponent<BulletController>() != null)
+            {
+                bullets.Add(obj);
+            }
+        }
+    }
+
+    // 更新。Runtime（C++）が自動で呼び出してくれる。
+    private void Update()
+    {
+        Vector3 pos;
+        pos = transform.LocalPosition;
+
+        // キーボード入力＆移動
+        if (Runtime.GetKey('W')) { pos.y += speed; }
+        if (Runtime.GetKey('S')) { pos.y -= speed; }
+        if (Runtime.GetKey('A')) { pos.x -= speed; }
+        if (Runtime.GetKey('D')) { pos.x += speed; }
+        // 座標をTransformにセット
+        transform.LocalPosition = pos;
+
+        // Shot
+        if (Runtime.GetKey('P')) { Shot(); }
+        ++counter;
+    }
+
+    // 無効な状態の弾を検索し、発射する
+    private void Shot()
+    {            
+        // むやみな連射防止
+        if (counter < interval) {return;}
+        foreach (GameObject bullet in bullets){
+            BulletController controller = (BulletController)bullet.GetComponent<BulletController>();
+            if (controller == null) { continue; }
+            if (!bullet.Enabled){
+                controller.Shot(transform.Position);
+                counter = 0;
+                return;
+            }
+        }
+    }
+}
+```
+
+Unityに近い感覚で、ゲームのスクリプトを記述することができます。  
 
 このスクリプティングシステムの大きな特徴は、  
 ”**C++側に埋め込まれている**”ことです。  
 
 C#とC++の連携手段としてもっとも有名であるものは、  
-**「.NETで開発したC#アプリケーションに、C++で記述されたdllを埋め込むこと（P/Invoke）」**です。  
+「C#アプリケーション(.NET)に、C++で記述されたdllを埋め込むこと（P/Invoke）」です。  
 しかし、そもそも.NETは一部のプラットフォームにしか対応していません。  
 （例えば、.NETはPlaystationやXboxなどのゲーム機には非対応です。）  
 
 この手段では本エンジンの開発目標である、マルチプラットフォーム対応が不可能でした。  
   
-そこで、「Mono ([https://www.mono-project.com/:material-open-in-new:](https://www.mono-project.com/){:target="_blank"}) 」を用いて、C#を動作させるVM（Virtual Machine/仮想マシン）をNativeRuntime（C++）側へ埋め込みました。  
+そこで、「Mono ([https://www.mono-project.com/:material-open-in-new:](https://www.mono-project.com/){:target="_blank"}) 」を使っています。  
+C#を動作させるVM（Virtual Machine/仮想マシン）そのものをNativeRuntime（C++）側へ埋め込むことで、C++側からスクリプトを管理します。  
 
 !!! note
     Monoは、クロスプラットフォームで動作する.NET Framework互換のフレームワークです。
 
 
-## エンジン標準ライブラリ
+## エンジン標準算術ライブラリ
 
-算術ライブラリ自作など。  
-Vector3などは、IEquatableやIFormattableを実装していて、APIとして運用しやすくした。  
+Runtime(C++)と挙動を合わせるために、算術ライブラリは自作しています。  
+また、これらのライブラリは書籍（Effective C#や.NETのクラスライブラリ設計など）を読んで、より良いライブラリとなるように工夫をしました。
+例えば、Vector3などは、IEquatableやIFormattableを実装していて、APIとして運用しやすくしています。  
 
 ## 型情報とインスタンスの管理
 
-C++側でmonoを使って型情報を解析している。  
-`[SerializeField]`属性が付けられたフィールドとプロパティは、シリアライズされ、エディタのInspectorにも表示される。  
-オブジェクトはC++側で管理している。  
-C++とC#間の相互運用時は、実行時においてユニークな「InstanceID」で管理しています。InstanceIDは、C++では`int32_t`型、C#では`Int`型です。  
+ゲームオブジェクトやコンポーネント、スクリプトなどはすべてC++側で管理されます。  
 
-## ホットリロード機能
+## 実行までの流れ
 
-現在準備中です。
-参考資料として、過去に実験で実現している私のツイートを添付します。  
-（当時は興奮していたため、ツイート文が乱れている点につきましてはご容赦ください）
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">はい！！！ゲームのスクリプトっぽくして！！！！<br>再コンパイル（ホットリロード）する実験に成功しましたああああああ！！！！！！！<br>ホットリロードめちゃ苦労した…<br><br>（分かりづらいですが、C#スクリプトを変更して、キャラの移動スピード上げてます） <a href="https://t.co/jKKxVFF5i6">https://t.co/jKKxVFF5i6</a> <a href="https://t.co/o6DZWe6WSD">pic.twitter.com/o6DZWe6WSD</a></p>&mdash; 猫茶(実は犬派) (@mewmew_tea) <a href="https://twitter.com/mewmew_tea/status/1536982292413181952?ref_src=twsrc%5Etfw">June 15, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+C#スクリプトは、実行前にIL（中間言語）に変換されます。  
+実行時、ILを読み込んで実行時（JIT）コンパイルされることで実行されます。
+実行するのは、Runtimeに埋め込まれたMonoのVM（Virtual Machine/仮想マシン）です。
+
+![](../../images/CSScriptSystem_Flow.svg)
 
 
 ## スクリプト（コンポーネント）が呼び出される仕組み
@@ -43,19 +106,13 @@ C++とC#間の相互運用時は、実行時においてユニークな「Instan
 コンポーネントの基底クラスには、UpdateやInitなどの関数は定義していません。  
 つまり、関数のオーバーライドや仮想関数は使っていません。  
   
-NativeRuntime（C++）側でC#スクリプトを読み込んだ際、monoのAPIを用いてコンポーネントの型情報を取得しています。  
-その際に「Updateメソッドが存在するか？」を確認しています。  
-存在するときのみ、呼び出し対象のリストに登録して呼び出していますいます。  
-なにもしない関数を呼び出すことがないので、無駄なオーバーヘッドを防いでいます。  
-
-!!! note
-    C#のSystem.Reflectionも使わないことで、C++側でスクリプト全般を管理することに成功しています。  
-    Unityもおそらく同様の仕組みで、そのためにスクリプトの基底クラスは「MonoBehaviour」という名前であると私は推察しています。
-
-## 実行までの流れ
-
-![](../../images/CSScriptSystem_Flow.svg)
 ![](../../images/CSScriptSystem_EventFunction.svg)
+
+NativeRuntime（C++）は、C#スクリプトを読み込んだ際、monoのAPIを用いてコンポーネントの型情報を取得しています。  
+その際に「Updateメソッドが存在するか？」を確認しています。  
+存在するときのみ、呼び出し対象のリストに登録をしておき、そこから呼び出しています。  
+なにもしない関数を呼び出すことを防いでいます。  
+
 
 ## ImGui（エンジンユーザー用）
 
@@ -80,3 +137,11 @@ private void ImGuiUpdate()
 <figcaption>実行結果</figcaption>
 ![](../../images/miyadaiku_userImGui.png)
 </figure>
+
+
+## （準備中）ホットリロード機能
+
+現在準備中です。
+参考資料として、過去に実験で実現したときの動画を添付します。  
+
+

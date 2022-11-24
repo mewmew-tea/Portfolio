@@ -42,7 +42,7 @@ nav:
       - レンダラについて: ./works/MiyadaikuEngine1.0/renderer.md
       - C#スクリプティングシステム: ./works/MiyadaikuEngine1.0/scripting.md 
       - エディタについて: ./works/MiyadaikuEngine1.0/editor.md  
-      - RuntimeとEditor間のプロセス通信（IPC）: ./works/MiyadaikuEngine1.0/ipc.md  
+      - RuntimeとEditor間のプロセス間通信（IPC）: ./works/MiyadaikuEngine1.0/ipc.md  
       - ソースコードの品質管理（CI/CD）: ./works/MiyadaikuEngine1.0/cicd.md 
       
     - Effekseer:
@@ -75,6 +75,11 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 extra:
   social:

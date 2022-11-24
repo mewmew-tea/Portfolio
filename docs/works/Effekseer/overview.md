@@ -17,7 +17,8 @@ Effekseerは、ゲームエフェクトを作成するためのツールおよ�
 このため、以下のような取り組みをしています。
 
 また、作業についてのログなどは、こちらのIssueにて随時更新しています。
-ぜひご一読ください。（備考：私のGitHubユーザー名は「mewmew-tea」です。）
+ぜひご一読ください。  
+（備考：私のGitHubユーザー名は「mewmew-tea」です。）
 **[https://github.com/effekseer/Effekseer/issues/894](https://github.com/effekseer/Effekseer/issues/894)**
 
 
