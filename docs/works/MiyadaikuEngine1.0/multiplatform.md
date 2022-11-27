@@ -22,4 +22,4 @@ DirectXには、公式でDirectXTK（算術ライブラリなど）やDirectXTex
 プラットフォーム間の違いが最も大きい部分です。 
 インターフェイス化は欠かせません。   
 OS機能は、Platformクラスとしてインターフェイス化しました。  
-グラフィックスAPIは、[RHI（Render Hardware Interface）](./renderer#RHI（Render Hardware Interface）)というインターフェイス層を用意しました。
+グラフィックスAPIは、[RHI（Render Hardware Interface）](/works/MiyadaikuEngine1.0/renderer/#rhirender-hardware-interface)というインターフェイス層を用意しました。
