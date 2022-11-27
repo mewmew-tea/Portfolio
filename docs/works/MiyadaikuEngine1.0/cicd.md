@@ -38,6 +38,9 @@ CMakeを用いて自動ビルドをしています。
 
 ## 自動コード整形
 
+コードは、「Clang-format」を用いて自動整形されます。
+![](../../images/miyadaiku_CodeFormat.png)
+
 ## GitHub Actions：CI/CDワークフローの自動実行
 
 テストやビルドなど、CI/CDのワークフローはGitHub Actionsを用いて構築しました。  
