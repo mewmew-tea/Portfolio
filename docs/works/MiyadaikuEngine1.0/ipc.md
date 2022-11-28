@@ -100,6 +100,9 @@ sequenceDiagram
 やり取りする内容を、「型情報」と「データ」の２つに分けました。
 （型情報は一度取得すれば充分だが、データは高い頻度で取得する）
 
+![](../../images/miyadaiku_IPC_component.svg)
+![](../../images/miyadaiku_IPC_component_ours.svg)
+
 型情報とデータはそれぞれ配列になっていて、Editorはそれぞれを照らし合わせて表示します。  
 
 ### 送受信データ形式について
