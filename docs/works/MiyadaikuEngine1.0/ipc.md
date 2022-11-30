@@ -101,7 +101,7 @@ sequenceDiagram
 （型情報は一度取得すれば充分だが、データは高い頻度で取得する）
 
 ![](../../images/miyadaiku_IPC_component.svg)
-![](../../images/miyadaiku_IPC_component_ours.svg)
+![](../../images/miyadaiku_IPC_component_separated.svg)
 
 型情報とデータはそれぞれ配列になっていて、Editorはそれぞれを照らし合わせて表示します。  
 
