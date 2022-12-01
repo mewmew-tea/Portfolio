@@ -16,6 +16,8 @@
 さらに、編集情報はEditor側でも保持します。  
 これにより、仮にRuntimeがクラッシュした場合でも、Editor側から編集情報を復元できるといったメリットもあります。  
 
+![](../../images/miyadaiku_IPC_Editor_Runtime.svg)
+
 このように、UnityやUEでは困難であったことを実現したいと考え、開発中です。  
 
 !!! note
