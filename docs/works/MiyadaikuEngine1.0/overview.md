@@ -31,7 +31,7 @@
 ## 特徴とその解説
 
 - [マルチプラットフォームのための工夫](./multiplatform.md)  
-- [レンダラについて](./renderer.md)  
+- [レンダラとRHI](./renderer.md)  
 - [C#スクリプティングシステム](./scripting.md)  
 - [エディタについて](./editor.md)  
 - [RuntimeとEditor間のプロセス間通信（IPC）](./ipc.md)  

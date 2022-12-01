@@ -1,4 +1,4 @@
-# レンダラ
+# レンダラとRHI
 
 ## RHI（Render Hardware Interface）
 

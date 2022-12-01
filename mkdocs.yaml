@@ -39,7 +39,7 @@ nav:
     - MiyadaikuEngine1.0:
       - 概要: ./works/MiyadaikuEngine1.0/overview.md
       - マルチプラットフォームのための工夫: ./works/MiyadaikuEngine1.0/multiplatform.md
-      - レンダラについて: ./works/MiyadaikuEngine1.0/renderer.md
+      - レンダラとRHI: ./works/MiyadaikuEngine1.0/renderer.md
       - C#スクリプティングシステム: ./works/MiyadaikuEngine1.0/scripting.md 
       - エディタについて: ./works/MiyadaikuEngine1.0/editor.md  
       - RuntimeとEditor間のプロセス間通信（IPC）: ./works/MiyadaikuEngine1.0/ipc.md  
