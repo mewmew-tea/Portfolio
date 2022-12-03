@@ -11,12 +11,16 @@
 ## **自己紹介**
 
 ![](./images/SNS_Icon.jpg){ align=left width=25% }
+   
 **名前：**宮﨑 泰輔    
 **特技/趣味：**剣道初段、油彩画鑑賞、ルービックキューブ など  
-:fontawesome-brands-twitter:**Twitter：**[@mewmew_tea](https://twitter.com/mewmew_tea)   
-:fontawesome-brands-github:**GitHub：**[https://github.com/mewmew-tea](https://github.com/mewmew-tea)  
 
-私は様々な技術を知ったり触れることが好きです。  
+:fontawesome-brands-twitter: **Twitter：**[@mewmew_tea](https://twitter.com/mewmew_tea)   
+:fontawesome-brands-github: **GitHub：**[https://github.com/mewmew-tea](https://github.com/mewmew-tea)  
+:simple-qiita: **Qiita：**[https://qiita.com/mewmew_tea](https://qiita.com/mewmew_tea)  
+:simple-blogger: **個人ブログ：**[https://nekocha.hatenablog.com/](https://nekocha.hatenablog.com/)  
+<br>
+私は技術を知ったり触れることが好きです。  
 とくに、幅広い分野に触れることが出来るゲームエンジン開発はとても楽しく感じていて、日々ゲームエンジンの自作に勤しんでいます。  
 
  
