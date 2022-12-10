@@ -52,6 +52,8 @@ jobs:
       # build and deploy to github io
       #--------------------------
       - name: mkdocs github io build
+        env:
+          GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
         run: mkdocs build --clean --use-directory-urls
       - name: Setup Pages
         uses: actions/configure-pages@v2
