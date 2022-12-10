@@ -89,6 +89,10 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/mewmew-tea
       name: mewmew_tea on GitHub
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+
 # plugins:
 #   - offline
 #   - glightbox
