@@ -48,8 +48,13 @@ nav:
       
     - Effekseer:
       - 概要: ./works/Effekseer/overview.md
-    - このポートフォリオの工夫: ./works/thisPortfolio.md
+
+    - MiyadaikuEngine（旧）:
+      - 概要: ./works/MiyadaikuEngine/overview.md
+
     - がっぽり！爆走人力車: ./works/jinrikisha.md
+    
+    - このポートフォリオの工夫: ./works/thisPortfolio.md
 
   
 extra_css:

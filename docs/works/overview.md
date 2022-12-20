@@ -5,7 +5,7 @@
 ### [MiyadaikuEngine 1.0](./MiyadaikuEngine1.0/overview.md)
 
 
-![](./images/MiyadaikuEngine1.0.png){ align=right width=50% }
+![](../../images/MiyadaikuEngine1.0.png){ align=right width=50% }
 
 開発中の自作のゲームエンジン。  
 ゲーム開発のイテレーションを向上を目指し、コア部分から丁寧に設計したことが大きな特徴。  
@@ -14,6 +14,15 @@
 ### [Effekseer](./Effekseer/overview.md)
 ゲームエフェクト作成用のツールと、作成したエフェクトを様々な環境で再生するためのミドルウェア。  
 バージョン1.8以降の新機能開発のコアメンバーとして開発参加中。  
+
+### [Miyadaiku Engine（旧 自作ゲームエンジン）](./MiyadaikuEngine/overview.md)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2QOHgvfN1TI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+初めて開発した、自作のゲームエンジン。  
+現在は開発を終了しています。  
+
+コンポーネント指向、エディタのGUI、親子構造をなすゲームオブジェクト、物理エンジン（PhysX）、Undo/Redoなど、多くの機能を実装しています。  
 
 ## **Games**
 
