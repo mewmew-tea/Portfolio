@@ -48,7 +48,7 @@
 Unityで開発し、Xbox Series X|SとWindowsPCでリリース。  
 
 
-### AUTOMATON MAZE
+### [AUTOMATON MAZE](./automatonmaze.md)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZnCv5I311Wc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -62,5 +62,5 @@ Unityで開発し、Xbox Series X|SとWindowsPCでリリース。
 </table>
 
 
-ローグライクの2Dアクション。  
+ローグライク（ローグライト）の2Dアクション。  
 

@@ -53,7 +53,9 @@ nav:
       - 概要: ./works/MiyadaikuEngine/overview.md
 
     - がっぽり！爆走人力車: ./works/jinrikisha.md
-    
+
+    - AutomatonMaze: ./works/automatonmaze.md
+
     - このポートフォリオの工夫: ./works/thisPortfolio.md
 
   
