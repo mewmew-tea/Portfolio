@@ -20,7 +20,7 @@ theme:
       primary: amber
       accent: deep orange
       toggle:
-        icon: material/weather-night
+        icon: material/weather-sunny 
         name: ダークテーマに切り替え
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -28,7 +28,7 @@ theme:
       accent: deep orange
       scheme: slate 
       toggle:
-        icon: material/weather-sunny  
+        icon: material/weather-night
         name: ライトテーマに切り替え
 
 nav:
