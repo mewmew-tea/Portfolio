@@ -2,6 +2,12 @@
 
 MiydaikuEngine 1.0は、C#スクリプティングに対応しています。 
 
+!!! note
+    C#スクリプトについて、個人ブログで導入解説記事を書きました。  
+    [MonoでC#スクリプトをC++から実行入門 - 猫茶の研究日誌](https://nekocha.hatenablog.com/entry/2022/12/24/102922)
+
+    C#を実行しているMonoのAPIと導入方法について解説しています。  
+
 このようにコンポーネントのスクリプトを記述することができます。
 ```csharp title="弾を発射するPlayerのスクリプト"
 public class PlayerController : MonoBehaviour
