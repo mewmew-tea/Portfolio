@@ -51,7 +51,7 @@ C#スクリプティングや、EditorとRuntimeのプロセスを分離、TCP/I
 
 ### [Effekseer](./works/Effekseer/overview.md)
 ゲームエフェクト作成用のツールと、作成したエフェクトを様々な環境で再生するためのミドルウェア。  
-バージョン1.8以降の新機能開発のコアメンバーとして開発参加中。  
+Miyadaiku Engine 1.0の開発と並行して、新機能開発のコアメンバーとして開発参加中。  
 
 ### [がっぽり！爆走人力車](./works/jinrikisha.md)
 
