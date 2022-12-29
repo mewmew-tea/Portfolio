@@ -36,6 +36,17 @@ h2 {
     /* background: #a7a8b3; */
     border-left: solid 6px darkorange;
 }
+
+h3::before {
+    padding: 0.5em;
+    content: "◆";
+}
+h3 {
+    border-spacing: 3em;
+    border-left: solid 4px darkorange;
+    border-bottom: solid 4px darkorange;
+}
+
 /* a{
     text-decoration: underline;
 } */
