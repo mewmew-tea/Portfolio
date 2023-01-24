@@ -7,7 +7,7 @@
     エンジンソース：[https://github.com/mewmew-tea/MiyadaikuEngine1.0:material-open-in-new:](https://github.com/mewmew-tea/MiyadaikuEngine1.0){:target="_blank"}
 
 !!! Note
-    昨年度（２０２１年度）も自作ゲームエンジンを開発していましたが、新たに２０２２年夏ごろより開発をはじめました。
+    [昨年度（２０２１年度）も自作ゲームエンジンを開発していました](../MiyadaikuEngine/overview)が、新たに２０２２年夏ごろより開発をはじめました。
 
 
 ## 目標・設計思想
