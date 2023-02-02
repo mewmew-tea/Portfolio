@@ -58,6 +58,8 @@ nav:
 
     - このポートフォリオの工夫: ./works/thisPortfolio.md
 
+    - プライバシーポリシー: ./works/privacy-policy.md
+
   
 extra_css:
   - stylesheets/extra.css
