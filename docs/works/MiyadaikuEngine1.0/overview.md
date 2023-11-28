@@ -2,10 +2,6 @@
 
 ![](../../images/MiyadaikuEngine1.0.png)
 
-!!! Info
-    本エンジンは、オープンソースで開発しています。  
-    エンジンソース：[https://github.com/mewmew-tea/MiyadaikuEngine1.0:material-open-in-new:](https://github.com/mewmew-tea/MiyadaikuEngine1.0){:target="_blank"}
-
 !!! Note
     [昨年度（２０２１年度）も自作ゲームエンジンを開発していました](../MiyadaikuEngine/overview)が、新たに２０２２年夏ごろより開発をはじめました。
 
@@ -79,7 +75,6 @@ DirectX12などの最新世代グラフィックAPI設計を知りました。
 
 - [Unity](https://unity.com/ja)：全般的なエンジン設計
 - [UnrealEngine](https://www.unrealengine.com/ja/)：エンジンソースを含む。レンダラ設計など。
-- [Effekseer](https://github.com/effekseer/Effekseer)：開発参加することで得たノウハウ全般、CMakeビルドスクリプトなど
 - [GodotEngine](https://github.com/godotengine/godot)：C#スクリプトなど
 - [SpartanEngine](https://github.com/PanosK92/SpartanEngine)
 - [LumixEngine](https://github.com/nem0/LumixEngine)

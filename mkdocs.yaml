@@ -45,9 +45,6 @@ nav:
       - RuntimeとEditor間のプロセス間通信（IPC）: ./works/MiyadaikuEngine1.0/ipc.md  
       - ソースコードの品質管理（CI/CD）: ./works/MiyadaikuEngine1.0/cicd.md 
       - 開発ロードマップ: ./works/MiyadaikuEngine1.0/loadmap.md 
-      
-    - Effekseer:
-      - 概要: ./works/Effekseer/overview.md
 
     - MiyadaikuEngine（旧）:
       - 概要: ./works/MiyadaikuEngine/overview.md

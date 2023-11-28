@@ -1,8 +1,9 @@
 # Miyazaki Taisuke's portfolio
 
 !!! note
-    現在このポートフォリオサイトは製作中です。
-    一部のページが未完成であったり、誤りや不具合がある場合があります。
+    就活完了しました。  
+    このページは記録用＆今後何かで使うかもしれないので、残しています。  
+
 !!! note
     本ポートフォリオは、継続的にデプロイされています。  
     最新のデプロイ： [https://mewmew-tea.github.io/Portfolio/](https://mewmew-tea.github.io/Portfolio/)   
@@ -39,10 +40,6 @@
 開発中の自作のゲームエンジン。  
 C#スクリプティングや、EditorとRuntimeのプロセスを分離、TCP/IPによるプロセス間通信などが特徴。  
 ゲーム開発のイテレーションを向上させるため、コア部分から丁寧に設計し機能を充実させている。
-
-### [Effekseer](./works/Effekseer/overview.md)
-ゲームエフェクト作成用のツールと、作成したエフェクトを様々な環境で再生するためのミドルウェア。  
-Miyadaiku Engine 1.0の開発と並行して、新機能開発のコアメンバーとして開発参加中。  
 
 ### [がっぽり！爆走人力車](./works/jinrikisha.md)
 
