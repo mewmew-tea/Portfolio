@@ -11,10 +11,6 @@
 ゲーム開発のイテレーションを向上を目指し、コア部分から丁寧に設計したことが大きな特徴。  
 例えば、C#スクリプティングや、EditorとRuntimeのプロセスの分離、TCP/IPによるプロセス間通信などの機能があります。  
 
-### [Effekseer](./Effekseer/overview.md)
-ゲームエフェクト作成用のツールと、作成したエフェクトを様々な環境で再生するためのミドルウェア。  
-Miyadaiku Engine 1.0の開発と並行して、新機能開発のコアメンバーとして開発参加中。  
-
 ### [Miyadaiku Engine（旧 自作ゲームエンジン）](./MiyadaikuEngine/overview.md)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2QOHgvfN1TI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
